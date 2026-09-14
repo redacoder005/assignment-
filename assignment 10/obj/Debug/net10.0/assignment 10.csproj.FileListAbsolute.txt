@@ -1,0 +1,15 @@
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\bin\Debug\net10.0\assignment 10.exe
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\bin\Debug\net10.0\assignment 10.deps.json
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\bin\Debug\net10.0\assignment 10.runtimeconfig.json
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\bin\Debug\net10.0\assignment 10.dll
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\bin\Debug\net10.0\assignment 10.pdb
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\obj\Debug\net10.0\assignment 10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\obj\Debug\net10.0\assignment 10.AssemblyInfoInputs.cache
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\obj\Debug\net10.0\assignment 10.AssemblyInfo.cs
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\obj\Debug\net10.0\assignment 10.csproj.CoreCompileInputs.cache
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\obj\Debug\net10.0\assignment 10.sourcelink.json
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\obj\Debug\net10.0\assignment 10.dll
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\obj\Debug\net10.0\refint\assignment 10.dll
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\obj\Debug\net10.0\assignment 10.pdb
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\obj\Debug\net10.0\assignment 10.genruntimeconfig.cache
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assignment 10\obj\Debug\net10.0\ref\assignment 10.dll
