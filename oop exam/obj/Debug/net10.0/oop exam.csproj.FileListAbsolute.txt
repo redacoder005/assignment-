@@ -1,0 +1,15 @@
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\bin\Debug\net10.0\oop exam.exe
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\bin\Debug\net10.0\oop exam.deps.json
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\bin\Debug\net10.0\oop exam.runtimeconfig.json
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\bin\Debug\net10.0\oop exam.dll
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\bin\Debug\net10.0\oop exam.pdb
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\obj\Debug\net10.0\oop exam.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\obj\Debug\net10.0\oop exam.AssemblyInfoInputs.cache
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\obj\Debug\net10.0\oop exam.AssemblyInfo.cs
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\obj\Debug\net10.0\oop exam.csproj.CoreCompileInputs.cache
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\obj\Debug\net10.0\oop exam.sourcelink.json
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\obj\Debug\net10.0\oop exam.dll
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\obj\Debug\net10.0\refint\oop exam.dll
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\obj\Debug\net10.0\oop exam.pdb
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\obj\Debug\net10.0\oop exam.genruntimeconfig.cache
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\oop exam\obj\Debug\net10.0\ref\oop exam.dll
