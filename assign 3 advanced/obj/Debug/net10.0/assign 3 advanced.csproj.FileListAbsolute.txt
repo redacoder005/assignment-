@@ -1,0 +1,15 @@
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\bin\Debug\net10.0\assign 3 advanced.exe
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\bin\Debug\net10.0\assign 3 advanced.deps.json
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\bin\Debug\net10.0\assign 3 advanced.runtimeconfig.json
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\bin\Debug\net10.0\assign 3 advanced.dll
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\bin\Debug\net10.0\assign 3 advanced.pdb
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\obj\Debug\net10.0\assign 3 advanced.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\obj\Debug\net10.0\assign 3 advanced.AssemblyInfoInputs.cache
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\obj\Debug\net10.0\assign 3 advanced.AssemblyInfo.cs
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\obj\Debug\net10.0\assign 3 advanced.csproj.CoreCompileInputs.cache
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\obj\Debug\net10.0\assign 3 advanced.sourcelink.json
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\obj\Debug\net10.0\assign 3 advanced.dll
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\obj\Debug\net10.0\refint\assign 3 advanced.dll
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\obj\Debug\net10.0\assign 3 advanced.pdb
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\obj\Debug\net10.0\assign 3 advanced.genruntimeconfig.cache
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\assign 3 advanced\obj\Debug\net10.0\ref\assign 3 advanced.dll
