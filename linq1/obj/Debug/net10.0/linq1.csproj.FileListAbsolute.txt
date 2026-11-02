@@ -1,0 +1,15 @@
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\bin\Debug\net10.0\linq1.exe
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\bin\Debug\net10.0\linq1.deps.json
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\bin\Debug\net10.0\linq1.runtimeconfig.json
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\bin\Debug\net10.0\linq1.dll
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\bin\Debug\net10.0\linq1.pdb
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\obj\Debug\net10.0\linq1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\obj\Debug\net10.0\linq1.AssemblyInfoInputs.cache
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\obj\Debug\net10.0\linq1.AssemblyInfo.cs
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\obj\Debug\net10.0\linq1.csproj.CoreCompileInputs.cache
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\obj\Debug\net10.0\linq1.sourcelink.json
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\obj\Debug\net10.0\linq1.dll
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\obj\Debug\net10.0\refint\linq1.dll
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\obj\Debug\net10.0\linq1.pdb
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\obj\Debug\net10.0\linq1.genruntimeconfig.cache
+C:\Users\Reda\OneDrive\المستندات\GitHub\assignment-\linq1\obj\Debug\net10.0\ref\linq1.dll
