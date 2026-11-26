@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Reda\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\GitHub\\assignment-\\readmorebooks\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7CD78BD6-63A6-4311-B2A2-09CBE85598FD}|readmorebooks.csproj|c:\\users\\reda\\onedrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\github\\assignment-\\readmorebooks\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CD78BD6-63A6-4311-B2A2-09CBE85598FD}|readmorebooks.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CD78BD6-63A6-4311-B2A2-09CBE85598FD}|readmorebooks.csproj|c:\\users\\reda\\onedrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\github\\assignment-\\readmorebooks\\migrations\\20261126145311_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CD78BD6-63A6-4311-B2A2-09CBE85598FD}|readmorebooks.csproj|solutionrelative:migrations\\20261126145311_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CD78BD6-63A6-4311-B2A2-09CBE85598FD}|readmorebooks.csproj|c:\\users\\reda\\onedrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\github\\assignment-\\readmorebooks\\data\\bookstorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CD78BD6-63A6-4311-B2A2-09CBE85598FD}|readmorebooks.csproj|solutionrelative:data\\bookstorecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CD78BD6-63A6-4311-B2A2-09CBE85598FD}|readmorebooks.csproj|c:\\users\\reda\\onedrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\github\\assignment-\\readmorebooks\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CD78BD6-63A6-4311-B2A2-09CBE85598FD}|readmorebooks.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CD78BD6-63A6-4311-B2A2-09CBE85598FD}|readmorebooks.csproj|c:\\users\\reda\\onedrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\github\\assignment-\\readmorebooks\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CD78BD6-63A6-4311-B2A2-09CBE85598FD}|readmorebooks.csproj|solutionrelative:models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CD78BD6-63A6-4311-B2A2-09CBE85598FD}|readmorebooks.csproj|c:\\users\\reda\\onedrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\github\\assignment-\\readmorebooks\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CD78BD6-63A6-4311-B2A2-09CBE85598FD}|readmorebooks.csproj|solutionrelative:models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20261126145311_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Reda\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\GitHub\\assignment-\\readmorebooks\\Migrations\\20261126145311_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20261126145311_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\Reda\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\GitHub\\assignment-\\readmorebooks\\Migrations\\20261126145311_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20261126145311_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-26T14:53:11.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookStoreContext.cs",
+              "DocumentMoniker": "C:\\Users\\Reda\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\GitHub\\assignment-\\readmorebooks\\data\\BookStoreContext.cs",
+              "RelativeDocumentMoniker": "data\\BookStoreContext.cs",
+              "ToolTip": "C:\\Users\\Reda\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\GitHub\\assignment-\\readmorebooks\\data\\BookStoreContext.cs",
+              "RelativeToolTip": "data\\BookStoreContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-26T14:46:33.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "book.cs",
+              "DocumentMoniker": "C:\\Users\\Reda\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\GitHub\\assignment-\\readmorebooks\\models\\book.cs",
+              "RelativeDocumentMoniker": "models\\book.cs",
+              "ToolTip": "C:\\Users\\Reda\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\GitHub\\assignment-\\readmorebooks\\models\\book.cs",
+              "RelativeToolTip": "models\\book.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-26T14:45:10.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Reda\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\GitHub\\assignment-\\readmorebooks\\models\\Category.cs",
+              "RelativeDocumentMoniker": "models\\Category.cs",
+              "ToolTip": "C:\\Users\\Reda\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\GitHub\\assignment-\\readmorebooks\\models\\Category.cs",
+              "RelativeToolTip": "models\\Category.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-26T14:42:39.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Reda\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\GitHub\\assignment-\\readmorebooks\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Reda\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\GitHub\\assignment-\\readmorebooks\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-26T14:37:32.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "author.cs",
+              "DocumentMoniker": "C:\\Users\\Reda\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\GitHub\\assignment-\\readmorebooks\\models\\author.cs",
+              "RelativeDocumentMoniker": "models\\author.cs",
+              "ToolTip": "C:\\Users\\Reda\\OneDrive\\\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A\\GitHub\\assignment-\\readmorebooks\\models\\author.cs",
+              "RelativeToolTip": "models\\author.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-26T14:44:25.756Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

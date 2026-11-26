@@ -1,0 +1,193 @@
+import argparse
+import math
+import os
+import struct
+import numpy as np
+from PIL import Image
+
+CB_HEADER = ">BBBI"        
+IMG_HEADER = ">IIBBBI"     
+
+def pad_image(arr, bh, bw):
+    h, w, _ = arr.shape
+    ph, pw = (-h) % bh, (-w) % bw
+    if ph or pw:
+        arr = np.pad(arr, ((0, ph), (0, pw), (0, 0)), mode="edge")
+    return arr
+
+def image_to_vectors(arr, bh, bw):
+    hp, wp, c = arr.shape
+    v = arr.reshape(hp // bh, bh, wp // bw, bw, c).swapaxes(1, 2)
+    return v.reshape(-1, bh * bw * c)
+
+def vectors_to_image(vecs, hp, wp, c, bh, bw):
+    a = vecs.reshape(hp // bh, wp // bw, bh, bw, c).swapaxes(1, 2)
+    return a.reshape(hp, wp, c)
+
+def assign(data, cb, chunk=20000):
+    cb = cb.astype(np.float64)
+    cn = (cb ** 2).sum(1)[None, :]
+    out = np.empty(len(data), dtype=np.int64)
+    for i in range(0, len(data), chunk):
+        x = data[i:i + chunk].astype(np.float64)
+        out[i:i + chunk] = np.argmin(cn - 2 * x @ cb.T, axis=1)
+    return out
+
+def refine(data, cb, iters=30, tol=1e-3):
+    rng = np.random.default_rng(0)
+    prev = None
+    for _ in range(iters):
+        idx = assign(data, cb)
+        new = cb.copy()
+        counts = np.bincount(idx, minlength=len(cb))
+        sums = np.zeros_like(cb)
+        np.add.at(sums, idx, data)
+        nz = counts > 0
+        new[nz] = sums[nz] / counts[nz][:, None]
+        empty = np.where(~nz)[0]
+        if len(empty):                       # re-seed empty cells with random vectors
+            new[empty] = data[rng.integers(0, len(data), len(empty))]
+        cb = new
+        err = ((data - cb[idx]) ** 2).mean()
+        if prev is not None and abs(prev - err) <= tol * max(prev, 1e-9):
+            break
+        prev = err
+    return cb
+
+def build_codebook(data, n):
+    data = data.astype(np.float64)
+    cb = data.mean(axis=0, keepdims=True)
+    while len(cb) < n:
+        if len(cb) * 2 <= n:
+            cb = np.vstack([cb - 1, cb + 1])
+        else:                                
+            k = n - len(cb)
+            counts = np.bincount(assign(data, cb), minlength=len(cb))
+            top = np.argsort(counts)[::-1][:k]
+            extra = cb[top] + 1
+            cb[top] = cb[top] - 1
+            cb = np.vstack([cb, extra])
+        cb = refine(data, cb)
+    return np.clip(np.round(cb), 0, 255).astype(np.uint8)
+
+def bits_needed(n):
+    return max(1, math.ceil(math.log2(n)))
+
+def pack_indices(idx, b):
+    be = idx.astype(">u4").view(np.uint8).reshape(-1, 4)
+    bits = np.unpackbits(be, axis=1)[:, 32 - b:]
+    return np.packbits(bits.ravel()).tobytes()
+
+def unpack_indices(data, count, b):
+    bits = np.unpackbits(np.frombuffer(data, dtype=np.uint8))[:count * b].reshape(count, b)
+    full = np.zeros((count, 32), dtype=np.uint8)
+    full[:, 32 - b:] = bits
+    return np.packbits(full, axis=1).copy().view(">u4").reshape(-1).astype(np.int64)
+
+def compress(path, bh, bw, n, out_vq=None, out_cb=None):
+    img = Image.open(path)
+    img = img.convert("L") if img.mode in ("L", "1", "P", "LA") and img.mode != "P" else img.convert("RGB")
+    arr = np.array(img, dtype=np.uint8)
+    if arr.ndim == 2:
+        arr = arr[:, :, None]
+    h, w, c = arr.shape
+
+    padded = pad_image(arr, bh, bw)
+    vecs = image_to_vectors(padded, bh, bw)
+    n = min(n, len(vecs)) if n > len(vecs) else n
+    print(f"Image {w}x{h}, channels={c}, padded to {padded.shape[1]}x{padded.shape[0]}, "
+          f"{len(vecs)} vectors of dim {vecs.shape[1]}")
+
+    cb = build_codebook(vecs, n)
+    idx = assign(vecs, cb)
+    b = bits_needed(n)
+
+    base = os.path.splitext(path)[0]
+    out_vq = out_vq or base + ".vq"
+    out_cb = out_cb or base + ".cb"
+
+    with open(out_cb, "wb") as f:
+        f.write(struct.pack(CB_HEADER, bh, bw, c, n))
+        f.write(cb.tobytes())
+    with open(out_vq, "wb") as f:
+        f.write(struct.pack(IMG_HEADER, h, w, c, bh, bw, n))
+        f.write(pack_indices(idx, b))
+
+    original = h * w * c
+    comp = os.path.getsize(out_vq)
+    cbs = os.path.getsize(out_cb)
+    rec = vectors_to_image(cb[idx], padded.shape[0], padded.shape[1], c, bh, bw)[:h, :w]
+    mse = ((arr.astype(np.float64) - rec) ** 2).mean()
+    psnr = float("inf") if mse == 0 else 10 * math.log10(255 ** 2 / mse)
+
+    print(f"Codebook file  : {out_cb} ({cbs} bytes)")
+    print(f"Compressed file: {out_vq} ({comp} bytes), {b} bits per block")
+    print(f"Original size  : {original} bytes")
+    print(f"Compression ratio (image stream only)      : {original / comp:.3f}")
+    print(f"Compression ratio (stream + codebook file) : {original / (comp + cbs):.3f}")
+    print(f"MSE = {mse:.3f}, PSNR = {psnr:.2f} dB")
+    return out_vq, out_cb
+
+def decompress(path_vq, path_cb, out_path=None):
+    with open(path_cb, "rb") as f:
+        bh, bw, c, n = struct.unpack(CB_HEADER, f.read(struct.calcsize(CB_HEADER)))
+        cb = np.frombuffer(f.read(), dtype=np.uint8).reshape(n, bh * bw * c)
+    with open(path_vq, "rb") as f:
+        hs = struct.calcsize(IMG_HEADER)
+        h, w, c2, bh2, bw2, n2 = struct.unpack(IMG_HEADER, f.read(hs))
+        data = f.read()
+    if (bh, bw, c, n) != (bh2, bw2, c2, n2):
+        raise ValueError("Codebook file does not match the compressed file.")
+
+    hp, wp = h + (-h) % bh, w + (-w) % bw
+    count = (hp // bh) * (wp // bw)
+    idx = unpack_indices(data, count, bits_needed(n))
+    rec = vectors_to_image(cb[idx], hp, wp, c, bh, bw)[:h, :w]
+    img = Image.fromarray(rec[:, :, 0] if c == 1 else rec)
+    out_path = out_path or os.path.splitext(path_vq)[0] + "_decompressed.png"
+    img.save(out_path)
+    print(f"Decompressed image saved to {out_path} ({w}x{h})")
+    return out_path
+
+def interactive():
+    print("=== Vector Quantization ===\n1) Compress\n2) Decompress")
+    ch = input("Choose: ").strip()
+    if ch == "1":
+        p = input("Image path: ").strip()
+        bh = int(input("Block height: "))
+        bw = int(input("Block width : "))
+        n = int(input("Number of codebook vectors: "))
+        compress(p, bh, bw, n)
+    elif ch == "2":
+        vq = input("Compressed file (.vq): ").strip()
+        cb = input("Codebook file (.cb): ").strip()
+        decompress(vq, cb)
+    else:
+        print("Invalid choice.")
+
+
+def main():
+    ap = argparse.ArgumentParser(description="Vector Quantization compressor")
+    sub = ap.add_subparsers(dest="cmd")
+    c = sub.add_parser("compress")
+    c.add_argument("image")
+    c.add_argument("-bh", type=int, required=True, help="block height")
+    c.add_argument("-bw", type=int, required=True, help="block width")
+    c.add_argument("-n", type=int, required=True, help="codebook size")
+    c.add_argument("--vq", help="output compressed file")
+    c.add_argument("--cb", help="output codebook file")
+    d = sub.add_parser("decompress")
+    d.add_argument("vq")
+    d.add_argument("cb")
+    d.add_argument("-o", "--out")
+    a = ap.parse_args()
+    if a.cmd == "compress":
+        compress(a.image, a.bh, a.bw, a.n, a.vq, a.cb)
+    elif a.cmd == "decompress":
+        decompress(a.vq, a.cb, a.out)
+    else:
+        interactive()
+
+
+if __name__ == "__main__":
+    main()
